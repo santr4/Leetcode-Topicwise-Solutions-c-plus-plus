@@ -1,4 +1,4 @@
-// Program to generate Pascals triangle 
+// ** Program to generate Pascals triangle 
 
 import java.util.*;
 
@@ -14,10 +14,10 @@ public class tut1 {
         return res;
     }
 
-    public static void pascaltriangle(int n){
+    public static void pascaltriangle(int n) {
         // printing the entire row n
-        for(int c = 1;c <= n;c++){
-            System.out.println(nCr(n-1,c-1) + " ");
+        for (int c = 1; c <= n; c++) {
+            System.out.println(nCr(n - 1, c - 1) + " ");
         }
     }
 
