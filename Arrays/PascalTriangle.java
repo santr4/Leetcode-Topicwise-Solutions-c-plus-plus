@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class tut1 {
+public class PascalTriangle {
     public static long nCr(int n, int r) {
         long res = 1;
 
