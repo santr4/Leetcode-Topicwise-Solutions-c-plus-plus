@@ -22,7 +22,7 @@ long long maxSubarraySum(int arr[], int n)
         }
     }
     return maxi;
-}
+}  
 
 int main()
 {
