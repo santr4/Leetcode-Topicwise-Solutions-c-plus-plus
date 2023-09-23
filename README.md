@@ -4,3 +4,5 @@ The repository is divided into topics which have code files inside them for refe
 
    - Arrays
    - Linked List
+   - Arrays Part 2
+   - Greedy Algorithm
