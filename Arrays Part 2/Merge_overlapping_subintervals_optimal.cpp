@@ -27,5 +27,10 @@ int main()
 {
     vector<vector<int>> arr = {{1, 3}, {8, 10}, {2, 6}, {15, 18}};
     vector<vector<int>> ans = mergeOverlappingSubintervals(arr);
+    cout << "the merged overlappint intervals: " << endl;
+    for (auto it : ans)
+    {
+        cout << "[" << it[0] << "," << it[1] << "]" << endl;
+    }
     return 0;
 }
