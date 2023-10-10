@@ -1,0 +1,21 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> newMap;
+        int n = nums.size();
+
+        // now we will create a hashmap 
+        for(int i = 0;i < n;i++){
+            newMap[nums[i]] = i;
+        }
+
+        // now we will find the complement
+        for(int i = 0;i < n;i++){
+            int complement = target - nums[i];
+            if(newMap.count(complement) && newMap[complement] != i){
+                return {i,newMap[complement]};
+            }
+        }
+        return {};
+    }
+};
