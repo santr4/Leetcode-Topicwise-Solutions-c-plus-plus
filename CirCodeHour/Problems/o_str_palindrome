@@ -1,0 +1,45 @@
+// #include <cmath>
+// #include <cstdio>
+// #include <vector>
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int choco = 0;
+//     while (n--)
+//     {
+//         string s;
+//         cin >> s;
+//         int x = s.length();
+//         if (x == 1)
+//         {
+//             choco++;
+//         }
+//         else
+//         {
+//             int l = 0;
+//             int r = x - 1;
+//             int flag = 0;
+//             while (l < r)
+//             {
+//                 if (s[l] != s[r])
+//                 {
+//                     flag = 1;
+//                     break;
+//                 }
+//                 ++l;
+//                 --r;
+//             }
+//             if (flag == 0)
+//             {
+//                 choco += x;
+//             }
+//         }
+//     }
+//     cout << choco << endl;
+//     return 0;
+// }
