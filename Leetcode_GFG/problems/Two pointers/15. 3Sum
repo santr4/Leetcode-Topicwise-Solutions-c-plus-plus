@@ -1,0 +1,53 @@
+// ** sum of three distinct triplets add up to 0.
+
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        // ** Hashmap Approach.
+        vector<vector<int>> ans; // Initialize a 2D vector to store the triplets
+        unordered_map<int, int> mp; // Initialize a hashmap to store numbers and their indices
+
+        sort(nums.begin(), nums.end()); // Sort the input vector
+
+        int n = nums.size(); // Get the size of the input vector
+
+        if (n < 3) { // Check if the input size is less than 3
+            return {}; // If so, return an empty vector (no triplets possible)
+        }
+        if (nums[0] > 0) { // Check if the smallest number in the sorted array is greater than zero
+            return {}; // If so, return an empty vector (no triplets summing to zero possible)
+        }
+
+        // Map the numbers to their indices in the hashmap
+        for (int i = 0; i < n; i++) {
+            mp[nums[i]] = i;
+        }
+
+        // Loop through the array to find triplets
+        for (int i = 0; i < n - 2; i++) {
+            // Skip duplicate values for the first element of the triplet
+            if (i != 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            // If the current element is greater than zero, no triplets are possible
+            if (nums[i] > 0) {
+                return ans;
+            }
+
+            // Loop through the array for the second element of the triplet
+            for (int j = i + 1; j < n - 1; j++) {
+                // Skip duplicate values for the second element of the triplet
+                if (j != i + 1 && nums[j] == nums[j - 1]) {
+                    continue;
+                }
+                // Calculate the key that would complete the triplet summing to zero
+                int key = -(nums[i] + nums[j]);
+                // Check if the key exists in the hashmap and if the index is greater than j
+                if (mp.find(key) != mp.end() && mp[key] > j) {
+                    ans.push_back({nums[i], nums[j], key}); // Add the triplet to the answer vector
+                }
+            }
+        }
+        return ans; // Return the vector containing unique triplets summing to zero
+    }
+};
