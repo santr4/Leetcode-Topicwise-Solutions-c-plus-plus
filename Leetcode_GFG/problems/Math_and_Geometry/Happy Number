@@ -1,0 +1,23 @@
+class Solution
+{
+public:
+    bool isHappy(int n)
+    {
+        int sqrSum = 0;
+        if (n == 1)
+        {
+            return true;
+        }
+        string s = to_string(n);
+        if (s.length() == 1 && n != 7)
+        {
+            return false;
+        }
+
+        for (char i : s)
+        {
+            sqrSum += (i - '0') * (i - '0');
+        }
+        return isHappy(sqrSum);
+    }
+};
