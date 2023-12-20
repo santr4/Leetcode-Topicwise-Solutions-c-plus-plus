@@ -13,3 +13,4 @@ The repository is divided into topics which have code files inside them for refe
 - Recursion
 - Math and Geometry
 - Binary Search
+- Bit Manipulation
