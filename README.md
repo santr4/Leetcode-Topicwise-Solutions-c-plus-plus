@@ -16,3 +16,4 @@ The repository is divided into topics which have code files inside them for refe
       - Binary Trees
       - Bit Manipulation
       - Strings
+      - Sorting
