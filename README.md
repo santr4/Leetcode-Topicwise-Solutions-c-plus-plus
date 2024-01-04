@@ -18,3 +18,4 @@ The repository is divided into topics which have code files inside them for refe
       - Strings
       - Sorting
       - Matrix
+      - Dynamic Programming
